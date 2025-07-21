@@ -1,0 +1,161 @@
+=== PROJECT STRUCTURE ===
+.
+├── .idea
+│   ├── .gitignore
+│   ├── compiler.xml
+│   ├── gradle.xml
+│   ├── misc.xml
+│   ├── vcs.xml
+│   └── workspace.xml
+├── frontend
+│   ├── public
+│   │   ├── models
+│   │   │   └── .DS_Store
+│   │   └── vite.svg
+│   ├── src
+│   │   ├── assets
+│   │   │   └── react.svg
+│   │   ├── components
+│   │   │   ├── ui
+│   │   │   │   ├── alert.jsx
+│   │   │   │   ├── badge.jsx
+│   │   │   │   ├── button.jsx
+│   │   │   │   ├── card.jsx
+│   │   │   │   ├── checkbox.jsx
+│   │   │   │   ├── input.jsx
+│   │   │   │   ├── label.jsx
+│   │   │   │   ├── select.jsx
+│   │   │   │   └── table.jsx
+│   │   │   ├── utils
+│   │   │   │   └── dataTransformers.jsx
+│   │   │   ├── AnimatedSection.jsx
+│   │   │   ├── InputForm.jsx
+│   │   │   ├── OutputTable.jsx
+│   │   │   └── SimulationHistory.jsx
+│   │   ├── lib
+│   │   │   └── utils.js
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .gitignore
+│   ├── README.md
+│   ├── components.json
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── jsconfig.json
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.cjs
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   ├── com
+│   │   │   │   ├── example
+│   │   │   │   │   ├── cpuscheduler
+│   │   │   │   │   │   ├── controller
+│   │   │   │   │   │   │   ├── CorsConfig.java
+│   │   │   │   │   │   │   ├── CpuTaskController.java
+│   │   │   │   │   │   │   └── SimulationHistoryController.java
+│   │   │   │   │   │   ├── model
+│   │   │   │   │   │   │   ├── CpuTask.java
+│   │   │   │   │   │   │   ├── FcfsSjfTaskResponse.java
+│   │   │   │   │   │   │   ├── GanttChart.java
+│   │   │   │   │   │   │   ├── IdleTime.java
+│   │   │   │   │   │   │   ├── PriorityTaskResponse.java
+│   │   │   │   │   │   │   ├── RrTaskResponse.java
+│   │   │   │   │   │   │   ├── SimulationHistory.java
+│   │   │   │   │   │   │   └── SimulationHistoryResponse.java
+│   │   │   │   │   │   ├── repository
+│   │   │   │   │   │   │   ├── CpuTaskRepository.java
+│   │   │   │   │   │   │   └── SimulationHistoryRepository.java
+│   │   │   │   │   │   ├── service
+│   │   │   │   │   │   │   ├── CpuTaskService.java
+│   │   │   │   │   │   │   ├── SchedulingAlgorithmService.java
+│   │   │   │   │   │   │   └── SimulationHistoryService.java
+│   │   │   │   │   │   ├── .DS_Store
+│   │   │   │   │   │   └── CpuschedulerApplication.java
+│   │   │   │   │   └── .DS_Store
+│   │   │   │   └── .DS_Store
+│   │   │   └── .DS_Store
+│   │   ├── resources
+│   │   │   ├── static
+│   │   │   ├── templates
+│   │   │   └── application.properties
+│   │   └── .DS_Store
+│   ├── test
+│   │   └── java
+│   │       └── com
+│   │           └── example
+│   │               ├── cpuscheduler
+│   │               │   ├── controller
+│   │               │   │   └── CpuTaskControllerTest.java
+│   │               │   ├── service
+│   │               │   │   ├── CpuTaskServiceTest.java
+│   │               │   │   └── SchedulingAlgorithmServiceTest.java
+│   │               │   ├── .DS_Store
+│   │               │   └── CpuschedulerApplicationTests.java
+│   │               └── .DS_Store
+│   └── .DS_Store
+├── .DS_Store
+├── .gitattributes
+├── .gitignore
+├── Archive 2.zip
+├── Archive.zip
+├── HELP.md
+├── Run
+├── Task
+├── There
+├── build.gradle
+├── directory_structure.txt
+├── gradlew
+├── gradlew.bat
+├── initializationError
+├── package-lock.json
+├── package.json
+├── project-analysis.txt
+└── settings.gradle
+
+31 directories, 87 files
+
+=== TECH STACK ===
+Frontend:
+{
+  "dependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@tailwindcss/vite": "^4.1.11",
+    "framer-motion": "^12.8.0",
+    "framer-motion-3d": "^12.4.13",
+Backend:
+    id 'java'
+    id 'org.springframework.boot' version '3.4.2'
+    id 'io.spring.dependency-management' version '1.1.7'
+version = '0.0.1-SNAPSHOT'
+        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+java {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+=== CONFIGURATIONS ===
+--- vite.config.js ---
+--- application.properties ---
+
+=== API PATTERNS ===
+./src/main/java/com/example/cpuscheduler/controller/SimulationHistoryController.java:@RequestMapping("/api/simulation-history")
+./src/main/java/com/example/cpuscheduler/controller/SimulationHistoryController.java:    @GetMapping
+./src/main/java/com/example/cpuscheduler/controller/SimulationHistoryController.java:    @GetMapping("/{id}")
+./src/main/java/com/example/cpuscheduler/controller/SimulationHistoryController.java:    @GetMapping("/algorithm/{algorithm}")
+./src/main/java/com/example/cpuscheduler/controller/SimulationHistoryController.java:    @GetMapping("/recent/{limit}")
+./src/main/java/com/example/cpuscheduler/controller/CpuTaskController.java:@RequestMapping("/api/cpu-tasks")
+./src/main/java/com/example/cpuscheduler/controller/CpuTaskController.java:    @PostMapping("/schedule/{algorithm}")
+
+=== PACKAGE INFO ===
+package com.example.cpuscheduler.controller;
+
+=== FRONTEND API USAGE ===
+  // This is the function that is called to fetch the next token. It
